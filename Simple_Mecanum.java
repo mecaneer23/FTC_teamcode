@@ -49,18 +49,18 @@ public class Simple_Mecanum extends LinearOpMode {
                 y = gamepad1.left_stick_y;
                 clockwise = gamepad1.right_stick_x;
 
-				if (gamepad1.dpad_up) {
-					y = 1.0;
-				}
+		if (gamepad1.dpad_up) {
+			y = 1.0;
+		}
                 if (gamepad1.dpad_down) {
-					y = -1.0;
-				}
+			y = -1.0;
+		}
                 if (gamepad1.dpad_right) {
-					x = 1.0;
-				}
+			x = 1.0;
+		}
                 if (gamepad1.dpad_left) {
-					x = -1.0;
-				}
+			x = -1.0;
+		}
 				
                 if (gamepad1.right_bumper) {
                     fl = (y - x - clockwise)/2;
