@@ -20,6 +20,7 @@ public class Simple_Mecanum extends LinearOpMode {
     private DcMotor backLeft;
     private DcMotor frontRight;
     private DcMotor backRight;
+    private DcMotor CarouselSpinner;
 
     @Override
     public void runOpMode() {
@@ -35,6 +36,7 @@ public class Simple_Mecanum extends LinearOpMode {
         backLeft = hardwareMap.get(DcMotor.class, "backLeft");
         frontRight = hardwareMap.get(DcMotor.class, "frontRight");
         backRight = hardwareMap.get(DcMotor.class, "backRight");
+	CarouselSpinner = hardwareMap.get(DcMotor.class, "CarouselSpinner");
         frontRight.setDirection(DcMotor.Direction.REVERSE);
         backRight.setDirection(DcMotor.Direction.REVERSE);
 
@@ -44,22 +46,23 @@ public class Simple_Mecanum extends LinearOpMode {
             backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
             frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
             backRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+	    CarouselSpinner.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
             while (opModeIsActive()) {
                 x = gamepad1.left_stick_x;
                 y = gamepad1.left_stick_y;
                 clockwise = gamepad1.right_stick_x;
 
 		if (gamepad1.dpad_up) {
-			y = 1.0;
+			y = (float)1.0;
 		}
                 if (gamepad1.dpad_down) {
-			y = -1.0;
+			y = (float)-1.0;
 		}
                 if (gamepad1.dpad_right) {
-			x = 1.0;
+			x = (float)1.0;
 		}
                 if (gamepad1.dpad_left) {
-			x = -1.0;
+			x = (float)-1.0;
 		}
 				
                 if (gamepad1.right_bumper) {
@@ -79,6 +82,9 @@ public class Simple_Mecanum extends LinearOpMode {
                 backLeft.setPower(bl);
                 backRight.setPower(br);
 
+		if (gamepad1.a) {
+		    CarouselSpinner.setPower((float)0.5);
+		    
                 telemetry.update();
             }
         }
