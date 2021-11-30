@@ -275,7 +275,7 @@ public class AutoBase {
 }
 
 /*
-    during init:
+    During init:
     InitAuto()
 
     During run loop:
