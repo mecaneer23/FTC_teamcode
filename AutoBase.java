@@ -193,7 +193,7 @@ public class AutoBase {
         right_back.setPower(MotorPower);
     }
     
-    public void driveForward(double MotorPower, int distanceIN) {
+    public void driveForward(int distanceIN, double MotorPower) {
         if (MotorPower == (double) -2.0) {
             MotorPower = DRIVE_SPEED;
         }
@@ -213,7 +213,7 @@ public class AutoBase {
         setRunUsingEncoders();
     }
     
-    public void driveBackward(double MotorPower, int distanceIN) {
+    public void driveBackward(int distanceIN, double MotorPower) {
         if (MotorPower == (double) -2.0) {
             MotorPower = DRIVE_SPEED;
         }
@@ -233,7 +233,7 @@ public class AutoBase {
         setRunUsingEncoders();
     }
     
-    public void strafeLeft(double MotorPower, int distanceIN) {
+    public void strafeLeft(int distanceIN, double MotorPower) {
         if (MotorPower == (double) -2.0) {
             MotorPower = DRIVE_SPEED;
         }
@@ -253,7 +253,7 @@ public class AutoBase {
         setRunUsingEncoders();
     }
     
-    public void strafeRight(double MotorPower, int distanceIN) {
+    public void strafeRight(int distanceIN, double MotorPower) {
         if (MotorPower == (double) -2.0) {
             MotorPower = DRIVE_SPEED;
         }
@@ -272,6 +272,18 @@ public class AutoBase {
         stopDriving();
         setRunUsingEncoders();
     }
+
+    public void strafeNW(int distanceIN, double MotorPower) {}
+
+    public void strafeNE(int distanceIN, double MotorPower) {}
+
+    public void strafeSW(int distanceIN, double MotorPower) {}
+
+    public void strafeSE(int distanceIN, double MotorPower) {}
+
+    public void turnLeft(int degrees, double MotorPower) {}
+
+    public void turnRight(int degrees, double MotorPower) {}
 }
 
 /*
@@ -279,14 +291,14 @@ public class AutoBase {
     InitAuto()
 
     During run loop:
-    1. driveForward
-    2. driveBackward
-    3. strafeLeft
-    4. strafeRight
-    5. strafeNW
-    6. strafeNE
-    7. strafeSE
-    8. strafeSW
-    9. turnLeft
-    10. turnRight
+    driveForward(distanceIN, (double) 2)
+    driveBackward(distanceIN, (double) 2)
+    strafeLeft(distanceIN, (double) 2)
+    strafeRight(distanceIN, (double) 2)
+    strafeNW(distanceIN, (double) 2)
+    strafeNE(distanceIN, (double) 2)
+    strafeSW(distanceIN, (double) 2)
+    strafeSE(distanceIN, (double) 2)
+    turnLeft(degrees, (double) 2)
+    turnRight(degrees, (double) 2)
 */
