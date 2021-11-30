@@ -194,7 +194,7 @@ public class AutoBase {
     }
     
     public void driveForward(int distanceIN, double MotorPower) {
-        if (MotorPower == (double) -2.0) {
+        if (MotorPower == (double) 2) {
             MotorPower = DRIVE_SPEED;
         }
         resetEncoders();
@@ -214,7 +214,7 @@ public class AutoBase {
     }
     
     public void driveBackward(int distanceIN, double MotorPower) {
-        if (MotorPower == (double) -2.0) {
+        if (MotorPower == (double) 2) {
             MotorPower = DRIVE_SPEED;
         }
         resetEncoders();
@@ -234,7 +234,7 @@ public class AutoBase {
     }
     
     public void strafeLeft(int distanceIN, double MotorPower) {
-        if (MotorPower == (double) -2.0) {
+        if (MotorPower == (double) 2) {
             MotorPower = DRIVE_SPEED;
         }
         resetEncoders();
@@ -254,7 +254,7 @@ public class AutoBase {
     }
     
     public void strafeRight(int distanceIN, double MotorPower) {
-        if (MotorPower == (double) -2.0) {
+        if (MotorPower == (double) 2) {
             MotorPower = DRIVE_SPEED;
         }
         resetEncoders();
