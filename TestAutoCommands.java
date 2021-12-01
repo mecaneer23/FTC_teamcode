@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import org.firstinspires.ftc.teamcode.AutoBase;
 
 @Autonomous
-public class ExampleAuto extends LinearOpMode {
+public class TestAutoCommands extends LinearOpMode {
     @Override
     public void runOpMode() {
         AutoBase auto = new AutoBase();
