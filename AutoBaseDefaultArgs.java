@@ -285,6 +285,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void driveForward(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsForward(distanceIN);
         setRunToPosition();
@@ -302,6 +307,11 @@ public class AutoBaseDefaultArgs {
     }
     
     public void driveBackward(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsBackward(distanceIN);
         setRunToPosition();
@@ -319,6 +329,11 @@ public class AutoBaseDefaultArgs {
     }
     
     public void strafeLeft(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsLeft(distanceIN);
         setRunToPosition();
@@ -336,6 +351,11 @@ public class AutoBaseDefaultArgs {
     }
     
     public void strafeRight(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsRight(distanceIN);
         setRunToPosition();
@@ -353,6 +373,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void strafeNW(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsNW(distanceIN);
         setRunToPosition();
@@ -370,6 +395,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void strafeNE(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsNE(distanceIN);
         setRunToPosition();
@@ -387,6 +417,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void strafeSW(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsSW(distanceIN);
         setRunToPosition();
@@ -404,6 +439,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void strafeSE(int distanceIN, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         resetEncoders();
         setTargetPositionsSE(distanceIN);
         setRunToPosition();
@@ -421,6 +461,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void turnLeft(int degrees, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         int hypotenuse = (int) Math.sqrt(Math.pow(FL_TO_BR_DIMENSION_IN/2, 2) + Math.pow(FR_TO_BL_DIMENSION_IN/2, 2));
         resetEncoders();
         setTargetPositionsTurnLeft((hypotenuse/90)*degrees);
@@ -439,6 +484,11 @@ public class AutoBaseDefaultArgs {
     }
 
     public void turnRight(int degrees, double... MotorPower) {
+        if (MotorPower.length == 1 && MotorPower[0] != null) {
+            double MotorPower = MotorPower[0];
+        } else {
+            double MotorPower = DRIVE_SPEED;
+        }
         int hypotenuse = (int) Math.sqrt(Math.pow(FL_TO_BR_DIMENSION_IN/2, 2) + Math.pow(FR_TO_BL_DIMENSION_IN/2, 2));
         resetEncoders();
         setTargetPositionsTurnRight((hypotenuse/90)*degrees);
